@@ -3,8 +3,8 @@ data "aws_iam_policy_document" "queue" {
     effect = "Allow"
 
     principals {
-      type        = "*"
-      identifiers = ["*"]
+      type        = "Service"
+      identifiers = ["s3.amazonaws.com*"]
     }
 
     actions   = ["sqs:SendMessage"]
